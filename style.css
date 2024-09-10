@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;    
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #ECDFCC;
+}
+.logo a{
+    font-size: 2.3em;
+    color: #17153B;
+}
+.logo a:hover{
+    opacity: 0.54;
+    transition: all 0.4s ease;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links li{
+    margin: 10px;
+}
+.nav-links li a{
+    color: #0C0C0C;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 2px;
+}
+.nav-links li a:hover{
+    color: #EBD3F8;
+    opacity: all 0.3s ease;
+    background-color:#3C3D37 ;
+}
+#check{
+    display: none;
+}
+.menu-btn {
+    color: #FDAF7B;
+    cursor: pointer;
+    font-size: 2.2em;
+    display: none;
+}
+.box{
+    height: 40px;
+    display: flex;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 20px;
+}
+.box:hover input{
+    width: 150px;
+
+}
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+.box .fas{
+    color: #EBD3F8;
+    font-size: 18px;
+}
+.profile a{
+    color: #0C0C0C;
+    font-size: 25px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.profile a:hover{
+    background-color: #697565;
+    color: white;
+}
+@media (max-width:1040px){
+    .menu-btn {
+        display: block;
+        position: fixed;
+        left: 90%;
+    }
+    #check:checked ~ .menu-btn i:before{
+        content: "\f00d";
+    }
+    .nav-links{
+       position: fixed;
+         width: 100%;
+        top: 70px;
+        left: -100%;
+        background: #F5F7F8 ;
+        text-align: center;
+        height: 100vh;
+        display: block;
+        transition: all 0.3s ease; 
+       
+    }
+    .nav-links li{
+        padding: 30px;
+
+    }
+    .nav-links li a{
+        padding: 15px 60px;
+    }
+    #check:checked ~ .nav-links{
+        left: 0;
+    }
+    .box{
+        display: flex;
+        position: fixed;
+        left: 40%;
+        flex-wrap: wrap;
+
+    }
+    .profile {
+        position: fixed;
+        left:75% ;
+    }
+    @media (max-width:530px ){
+        .profile{
+            display: none;
+        }
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+    }
+
+}
